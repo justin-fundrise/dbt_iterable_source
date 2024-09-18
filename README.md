@@ -64,6 +64,9 @@ By default, all variables are assumed to be `true`.
 vars:
     iterable__using_campaign_label_history: false                    # default is true
     iterable__using_user_unsubscribed_message_type: false           # default is true
+    iterable__using_user_unsubscribed_message_type_history: false   # default is true
+    iterable__using_user_unsubscribed_channel: false           # default is true
+    iterable__using_user_unsubscribed_channel_history: false   # default is true
     iterable__using_campaign_suppression_list_history: false         # default is true   
     iterable__using_event_extension: false         # default is true   
 

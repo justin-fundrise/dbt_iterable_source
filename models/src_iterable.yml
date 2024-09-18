@@ -335,6 +335,8 @@ sources:
       - name: user_unsubscribed_channel
         identifier: "{{ var('iterable_user_unsubscribed_channel_identifier', 'user_unsubscribed_channel')}}"
         description: Table containing the channels from which a user has unsubscribed.
+        config:
+          enabled: "{{ var('iterable__using_user_unsubscribed_channel', true) }}"
         columns:
           - name: _fivetran_id
             description: A Fivetran-created unique identifier for users, derived from hashing user_id and/or email, depending on project type.
@@ -356,6 +358,8 @@ sources:
       - name: user_unsubscribed_channel_history
         identifier: "{{ var('iterable_user_unsubscribed_channel_history_identifier', 'user_unsubscribed_channel_history')}}"
         description: Table containing the history of channels from which a user has unsubscribed.
+        config:
+          enabled: "{{ var('iterable__using_user_unsubscribed_channel_history', true) }}"
         columns:
           - name: channel_id
             description: Reference to the channel from which the user unsubscribed
@@ -368,7 +372,7 @@ sources:
         identifier: "{{ var('iterable_user_unsubscribed_message_type_history_identifier', 'user_unsubscribed_message_type_history')}}"
         description: Table containing the history of message types from which a user has unsubscribed.
         config:
-          enabled: "{{ var('iterable__using_user_unsubscribed_message_type', true) }}"
+          enabled: "{{ var('iterable__using_user_unsubscribed_message_type_history', true) }}"
         columns:
           - name: message_type_id
             description: Reference to the message type from which the user unsubscribed
